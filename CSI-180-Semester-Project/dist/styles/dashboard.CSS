@@ -1,0 +1,454 @@
+/* Page Wide stuff */
+body{
+    margin: 0;
+}
+
+/* HEADER */
+.header_bar{
+display: flex;
+justify-content: right;
+align-items: center;
+padding: 10px 20px;
+border-bottom: solid;
+}
+.account_button{
+margin: 0;
+display: inline-block;
+}
+/* POPUPS */
+.blur_active{
+    filter: blur(20px);
+    transition: 0.25s;
+    pointer-events: none;
+    user-select: none;
+}
+.popup{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    min-height : 850px;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    background: white;
+    border-radius: 25px;
+    visibility: hidden;
+}
+.popup_active{
+    top: 50%;
+    visibility: visible;
+    opacity: 99;
+    transition: 0.25s;
+    z-index: 10;
+}
+/* FOOD Popup */
+.food_popup{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.food_search_input{
+    width: 85%;
+    margin: 1%;
+}
+.food_search_button{
+    width: 10%;
+    margin: 1%;
+}
+.food_results{
+    border: solid;
+    border-radius: 25px;
+    width: 98%;
+    height: 50%;
+    min-height: 500px;
+    max-height: 500px;
+    margin: 1%;
+    overflow-y: auto;
+}
+.results_table{
+    width: 100%;
+}
+.results_thead
+.reuslts_th{
+    height: 30px;
+    border-bottom: 1px solid #000;
+}
+.results_tr{
+    height: 30px;
+    border-bottom: 1px solid #000;
+}
+.results_td{
+    height: 30px;
+    border-bottom: 1px solid #000;
+}
+.food_selection_panel{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+.food_selection_info{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+    font-size: 30px;
+}
+.food_selection_form{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.highlighted{
+    background-color: whitesmoke;
+}
+/* CONTENT */
+.dash{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+.dash_page_structure{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+    .main_content{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        margin: 10px;
+    }
+    .main_logging{
+        flex-grow: 1;
+    }
+
+
+/* SIDE BAR */
+.sidebar_small{
+width: 100px;
+border-radius: 10px;
+border-top: solid;
+border-right: solid;
+min-width: 100px;
+background-color: rgb(0, 153, 25);;
+}
+.sidebar_big{
+width: 100px;
+}
+
+
+/* CALENDAR */
+.calendar_section{
+    border: solid;
+    min-width: 400px;
+    max-width: 400px;
+    margin: 10px;
+}
+    .calendar_remote{
+        border: solid;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        height: 50px;
+    }
+    .month{
+        text-align: center;
+    }
+    .calendar_grid{
+        border: solid;
+        margin: 10px;
+        
+    }
+    .days{
+        border: solid;
+        margin: 10px;
+        width:350px;
+        height:350px;
+    }
+    .day{
+        border: solid;
+        margin: 10px;
+    }
+    .month_back{
+        flex-grow: 1;
+    }
+    .day_back{
+        flex-grow: 1;
+    }
+    .date{
+        flex-grow: 3;
+    }
+    .day_forward{
+        flex-grow: 1;
+    }
+    .month_forward{
+        flex-grow: 1;
+    }
+
+
+/* DIARY */
+.daily_food_listing{
+    margin: 10px;
+}
+.food_list_header{
+    border: 2px, solid;
+    border-radius: 25px;
+    margin: .5%;
+    width: 99%;
+    height: 75px;
+    border: solid;
+    display: flex;
+    flex-direction: row;
+    }
+    .flh_image_container{
+        margin: 10px;
+        margin-left: 20px;
+        max-width: 50px;
+        max-height: 50px;
+        border: solid;
+        border-radius: 10px;
+        overflow: hidden;
+        }
+    .flh_image_container:hover{
+        cursor: pointer;
+    }
+        .flh_image{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+.food_list_body{
+    border: 2px, solid;
+    margin: .5%;
+    width: 99%;
+    min-height: 200px;
+    border: solid;
+    border-radius: 25px;
+}
+.food_list_table{
+    margin: 0;
+    width: 100%;
+}
+.table_entry{
+    height: 30px;
+}
+.food_filler{
+    width: 5%;
+}
+.food_icon{
+    width: 3%;
+}
+.food_name{
+    width: 70%;
+    text-align: left;
+}
+.food_quantity{
+    width: 1%;
+}
+.food_unit{
+    width: 10%;
+    text-align: left;
+}
+.food_calories{
+    width: 5%;
+    text-align: right;
+}
+.food_kCal{
+    width: 3%;
+}
+
+/* NUTRITION */
+.daily_totals{
+    border: solid;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 300px;
+    
+}
+    .energy_bars{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        flex-grow: 1;
+    }
+    .seperator{
+        border: solid;
+        border-color: rgb(158, 158, 158);
+        border-radius: 100px;
+        border-width: 2px;
+        margin: 30px;
+    }
+    .macro_bars{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+        flex-grow: 1;
+
+    }
+    .protein_total, .carb_total, .fats_total, .calorie_total{
+        padding: 10px;
+    }
+    .protein_total, .carb_total, .fats_total, .calorie_total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .protein_bar, .carb_bar, .fats_bar, .calorie_bar {
+        position: relative;
+        height: 20px;
+        flex: 1;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #c7c7c7;
+        color: rgb(0, 153, 25);
+    }
+    
+    .protein_bar::before, .carb_bar::before, .fats_bar::before, .calorie_bar::before  {
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        width: calc(var(--width, 0) * 1%);
+        min-width: 1px;
+        max-width: calc(100%);
+        background-color: rgb(0, 153, 25);
+    }
+    .current_height, .current_weight {
+        display: flex;
+        flex-direction: row;
+    }
+    .current_height_value, .current_weight_value {
+        color: rgb(0, 153, 25);
+    }
+    .notes_popup{
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+    }
+    .note_input{
+        height: 80%;
+        margin: 30px;
+        font-size: 30px;
+    }
+    .table_image {
+        width: 20px;
+        height: 20px;
+      }
+      .food_entry_popup_info,
+      .exercise_entry_popup_info,
+      .height_entry_popup_info,
+      .weight_entry_popup_info,
+      .note_entry_popup_info{
+        display: flex;
+        flex-direction: row;
+      }
+      .food_entry_popup_header,
+      .exercise_entry_popup_header,
+      .height_entry_popup_header,
+      .weight_entry_popup_header,
+      .note_entry_popup_header{
+        font-size: 75px;
+      }
+      .food_entry_popup_name,
+      .exercise_entry_popup_name{
+        font-size: 50px;
+        color: rgb(0, 153, 25);
+      }
+      .food_entry_popup_calories, 
+      .food_entry_popup_protein, 
+      .food_entry_popup_carbs, 
+      .food_entry_popup_fats,
+      .food_entry_popup_servings,
+      .exercise_entry_popup_calories, 
+      .exercise_entry_popup_protein, 
+      .exercise_entry_popup_carbs, 
+      .exercise_entry_popup_fats,
+      .exercise_entry_popup_servings,
+      .height_entry_popup_value  {
+        font-size: 40px;
+        margin: 40px;
+      }
+      .food_entry_popup_servings,
+      .exercise_entry_popup_servings{
+        width: 100px;
+        margin-right: 0px;
+      }
+      .food_entry_popup_filler,
+      .exercise_entry_popup_filler,
+      .height_entry_popup_filler,
+      .weight_entry_popup_filler,
+      .note_entry_popup_filler{
+        margin-top: 40px;
+        font-size: 40px;
+      }
+      .food_entry_popup_options,
+      .exercise_entry_popup_options,
+      .height_entry_popup_options,
+      .weight_entry_popup_options,
+      .note_entry_popup_options{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .food_entry_popup_update,
+      .food_entry_popup_delete, 
+      .exercise_entry_popup_update,
+      .exercise_entry_popup_delete,
+      .height_entry_popup_update,
+      .height_entry_popup_delete,
+      .weight_entry_popup_update,
+      .weight_entry_popup_delete,
+      .note_entry_popup_update,
+      .note_entry_popup_delete{
+        font-size: 50px;
+        height: 100px;
+      }
+      .note_entry_popup_value {
+        width: 100%;
+        height: 500px;
+        font-size: 30px;
+      }
+
+      /*CALENDAR SECTION*/
+
+      .calendar-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .calendar-header, .calendar-cell {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      .calendar-header {
+        background-color: rgb(0, 153, 25);
+      }
+      .calendar-cell:hover {
+        cursor: pointer;
+      }
+      .navigation-bar {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
